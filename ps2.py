@@ -118,7 +118,7 @@ def get_best_path(digraph, start, end, path, max_dist_outdoors, best_dist,
     start_node = Node(start)
     end_node = Node(end)
     #path[0] = path[0] + [start]
-    cur_path = [path[0][:], path[1], path[2]]
+    cur_path = [path[0], path[1], path[2]]
     cur_path[0] = cur_path[0] + [start]                     # here in this code it was crucial to  make sure we are not mutating the path variable in place
                                                             # as it will then change the path for the time when the recursion comes back to the previous function call
                                                             # and no more paths will be found after finding the first path(which will not be optimal) 
